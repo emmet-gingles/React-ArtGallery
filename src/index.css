@@ -9,7 +9,20 @@ h2 {
 }
 
 p {
-  font-size: 20px;;
+  font-size: 20px;
+}
+
+label {
+  padding: 10px;
+}
+  
+input[type="text"] {
+  margin: 10px;
+}
+  
+select {
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 section {
@@ -26,6 +39,7 @@ img:hover {
   cursor: pointer;
 }
 
+/* Class selector for suggestions list */
 .suggestion {
   position: fixed;
   top: 65px;
@@ -39,16 +53,45 @@ img:hover {
   padding-left: 0px;
 }
 
+/* Class selector for list items of suggestions list */
 .suggestionItem {
   list-style-type: none;
   padding: 5px;
 }
 
+/*  Hover event for list items of suggestions list */
 .suggestionItem:hover {
   cursor: pointer;
   background-color: rgba(185, 185, 146, 0.7);
 }
 
+/* Class selector for navigation buttons */
+.navBtn {
+  border: "1px solid #ccc";
+  background-color: #fff;
+  font-size: "1em";
+  padding: 10px;
+  margin: 5px;
+  width: 70px;
+}
+
+/* Hover event for all navigation buttons */
+.navBtn:hover {
+  cursor: pointer;
+}
+
+/* Class for navigation buttons that are disabled */
+.disabled {
+  pointer-events: none;
+  opacity: 0.6;         
+}
+
+/* Class selector for the current page number */
+.currentPage {
+  background-color: #4CAF50;
+}
+
+/* Selector for fullscreen image border */
 #fsimageBorder {
 	width: 100%;
 	height: 100%;
@@ -58,22 +101,40 @@ img:hover {
   background-color: rgba(0, 0, 0, 0.8);	
 }
 
+/* Selector for fullscreen image */
 #fsimage {
   margin: auto;
   width: 80%;
   height: 80%;
 }
 
-label {
-  padding: 10px;
+/* Hover event for fullscreen image */
+#fsimage:hover {
+  cursor: auto;
 }
 
-input[type="text"] {
-  margin: 10px;
+/* Selector for div that gives the number of results found */
+#resultsGrid {
+  text-align: center;
 }
 
-select {
-  margin-top: 10px;
-  margin-bottom: 10px;
+/* Selector for list of page numbers */
+#page-numbers {
+  list-style: none;
+  display: flex;
+  justify-content: center;
 }
+
+/* Selctor for all list items within the list */
+#page-numbers > li {
+  cursor: pointer;
+  padding: 12px;
+  font-size: 25px;
+}
+
+/* Hover event for all list items that are not currently selected */ 
+#page-numbers > li:hover:not(.currentPage) {
+  background-color: #ddd;
+}
+
 
