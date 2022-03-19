@@ -152,6 +152,7 @@ class App extends Component {
     getData() {     
         // Put list of paintings in the correct order
         this.sortData();
+        console.log(data.paintings[0])
         // Set painting's state to the JSON array
         this.setState({
             paintings: data.paintings
@@ -261,11 +262,13 @@ class App extends Component {
             data.paintings.sort(function(a, b){ 
                 // If true then order ascendingly
                 if(ascending) {
-                    return a.year > b.year;
+                    console.log("true")
+                    return a.year - b.year;
                 }
                 // Else order descendingly
                 else {
-                    return a.year < b.year;
+                    console.log("false")
+                    return b.year - a.year;
                 }
             });
         }
@@ -273,10 +276,12 @@ class App extends Component {
         else if(orderBy === "title") {
             data.paintings.sort(function(a, b){
                 if(ascending) {
-                    return a.title > b.title;
+                    console.log("true")
+                    return a.title.localeCompare(b.title);
                 }
                 else {
-                    return a.title < b.title;
+                    console.log("false")
+                    return b.title.localeCompare(a.title);
                 }
             });
         }
@@ -284,10 +289,12 @@ class App extends Component {
         else if(this.state.orderBy === "artist") {
             data.paintings.sort(function(a, b){
                 if(ascending) {
-                    return a.artist > b.artist;
+                    console.log("true")
+                    return a.artist.localeCompare(b.artist);
                 }
                 else {
-                    return a.artist < b.artist;
+                    console.log("false")
+                    return b.artist.localeCompare(a.artist);
                 }
             });
         }
