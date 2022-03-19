@@ -1,5 +1,7 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+You can view the project on [Github Pages](https://emmet-gingles.github.io/React-ArtGallery/)
+
 ## Available Scripts
 
 In the project directory, you can run:
